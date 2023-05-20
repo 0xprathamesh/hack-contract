@@ -2,7 +2,7 @@
 pragma solidity ^0.8.18;
 
 contract Game {
-    function pickACard () private view returns (uint256) {
+    function pickACard() private view returns (uint256) {
         uint256 pickedCard = uint256(keccak256(abi.encodePacked(blockhash(block.number), block.timestamp)));
         return pickedCard;
     }
